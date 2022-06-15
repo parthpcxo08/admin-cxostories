@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "Blog with Gatsby"
+    "name": "CXOstories with CXOsync"
   },
   "api": {
     "projectId": "6opt2m40",
@@ -16,7 +16,9 @@
     "@sanity/desk-tool",
     "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "tags",
+    "markdown"
   ],
   "parts": [
     {
@@ -34,6 +36,18 @@
     {
       "implements": "part:@sanity/dashboard/config",
       "path": "./src/dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/base/document-actions/resolver",
+      "path": "./cxostories/actions/resolver/resolveDocumentActions.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./cxostories/components/CXOlogoComponent.js"
+    },
+    {
+      "implements": "part:@sanity/base/app-loading-screen",
+      "path": "./cxostories/components/CXOloaderComponent.js"
     }
   ]
 }

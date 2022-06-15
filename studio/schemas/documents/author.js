@@ -1,12 +1,12 @@
 export default {
   name: "author",
   type: "document",
-  title: "Author",
+  title: "Webinars",
   fields: [
     {
       name: "name",
       type: "string",
-      title: "Name",
+      title: "Webinar Title",
     },
     {
       name: "slug",

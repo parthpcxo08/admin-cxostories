@@ -27,14 +27,30 @@
 
 .link {
   composes: item from 'part:@sanity/base/theme/layout/selectable-style';
-  display: block;
-  border-radius: 2px;
-  padding: var(--small-padding);
+  display: flex;
+  border-radius: 10px;
+  align-content: space-around;
+  padding: 8px;
+  padding: 1.2rem 1rem;
   text-decoration: none;
   text-align: center;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 40%) 1px 1px 7px -5px;
 }
 
 .iconWrapper {
   font-size: 2em;
+  display: flex;
+  align-items: center;
+  color: #0c2f60;
+}
+
+.widgetTitle {
+  padding-left: 10px;
+  border-left: 1px solid #f3f3f3;
+  margin-left: 10px;
+  font-family: 'Poppins';
 }

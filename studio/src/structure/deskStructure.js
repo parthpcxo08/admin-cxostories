@@ -1,6 +1,21 @@
 import S from "@sanity/desk-tool/structure-builder";
 import { MdSettings } from "react-icons/md";
-import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
+import {
+  MdPerson,
+  MdDescription,
+  MdLocalOffer,
+  MdOutlineWeb,
+  MdLocationOn,
+  MdPersonPin,
+  MdPinDrop,
+  MdPoll,
+  MdAttribution,
+  MdDomain,
+  MdSupervisedUserCircle,
+  MdCommentBank,
+} from "react-icons/md";
+
+import { HiSpeakerphone } from "react-icons/hi";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -41,40 +56,92 @@ export const getDefaultDocumentNode = (props) => {
 
 export default () =>
   S.list()
-    .title("Content")
+    .title("Collections")
     .items([
+      // S.listItem()
+      //   .title("Settings")
+      //   .icon(MdSettings)
+      //   .child(
+      //     S.editor()
+      //       .id("siteSettings")
+      //       .schemaType("siteSettings")
+      //       .documentId("siteSettings")
+      //   ),
+      // S.divider(),
       S.listItem()
-        .title("Settings")
-        .icon(MdSettings)
-        .child(
-          S.editor()
-            .id("siteSettings")
-            .schemaType("siteSettings")
-            .documentId("siteSettings")
-        ),
-      S.divider(),
+        .title("Webinars")
+        .icon(MdOutlineWeb)
+        .schemaType("webinar")
+        .child(S.documentTypeList("webinar").title("Webinars")),
       S.listItem()
-        .title("Blog posts")
-        .icon(MdDescription)
-        .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog posts")),
+        .title("Locations")
+        .icon(MdPinDrop)
+        .schemaType("location")
+        .child(S.documentTypeList("location").title("Locations")),
       S.listItem()
-        .title("Authors")
-        .icon(MdPerson)
-        .schemaType("author")
-        .child(S.documentTypeList("author").title("Authors")),
+        .title("Moderators")
+        .icon(MdPersonPin)
+        .schemaType("moderator")
+        .child(S.documentTypeList("moderator").title("Moderators")),
+      // S.listItem()
+      //   .title("Polls")
+      //   .icon(MdPoll)
+      //   .schemaType("post")
+      //   .child(S.documentTypeList("post").title("Polls")),
       S.listItem()
-        .title("Categories")
-        .icon(MdLocalOffer)
-        .schemaType("category")
-        .child(S.documentTypeList("category").title("Categories")),
+        .title("Keynotes")
+        .icon(MdAttribution)
+        .schemaType("keynote")
+        .child(S.documentTypeList("keynote").title("Keynotes")),
+      S.listItem()
+        .title("Sponsors")
+        .icon(MdDomain)
+        .schemaType("sponsor")
+        .child(S.documentTypeList("sponsor").title("Sponsors")),
+      S.listItem()
+        .title("Panelists")
+        .icon(MdSupervisedUserCircle)
+        .schemaType("panelist")
+        .child(S.documentTypeList("panelist").title("Panelists")),
+      // S.listItem()
+      //   .title("Testimonials")
+      //   .icon(MdCommentBank)
+      //   .schemaType("testimonial")
+      //   .child(S.documentTypeList("testimonial").title("Testimonials")),
+      // S.divider(),
+      S.listItem()
+        .title("Speakers")
+        .icon(HiSpeakerphone)
+        .schemaType("speaker")
+        .child(S.documentTypeList("speaker").title("Speakers")),
+      // S.listItem()
+      //   .title("Authors")
+      //   .icon(MdPerson)
+      //   .schemaType("author")
+      //   .child(S.documentTypeList("author").title("Authors")),
+      // S.listItem()
+      //   .title("Categories")
+      //   .icon(MdLocalOffer)
+      //   .schemaType("category")
+      //   .child(S.documentTypeList("category").title("Categories")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["category", "author", "post", "siteSettings"].includes(
-            listItem.getId()
-          )
+          ![
+            "webinar",
+            "speaker",
+            "testimonial",
+            "panelist",
+            "keynote",
+            "moderator",
+            "category",
+            "author",
+            "post",
+            "siteSettings",
+            "location",
+            "sponsor",
+          ].includes(listItem.getId())
       ),
     ]);

@@ -1,8 +1,9 @@
 {
   "private": true,
-  "name": "sanity-gatsby-blog",
+  "name": "cxostories",
   "version": "1.0.17",
   "scripts": {
+    
     "build": "lerna run build --parallel",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
