@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "cxostories-web",
+  "name": "blog-with-gatsby-web",
   "version": "1.0.7",
-  "author": "CXOsync",
+  "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "build": "gatsby build",
     "clean-cache": "gatsby clean",
