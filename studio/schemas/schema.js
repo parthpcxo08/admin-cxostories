@@ -35,6 +35,16 @@ export default createSchema({
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
+    {
+      name: "webinar",
+      title: "Webinar",
+      type: "document",
+      fields: [{
+        name: 'title',
+        title: 'Title',
+        type : 'string'
+      }],
+    },
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
