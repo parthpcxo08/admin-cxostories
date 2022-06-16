@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "blog-with-gatsby-studio",
+  "name": "cxostories-admin",
   "version": "1.0.15",
   "main": "package.json",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "CXOsync",
   "scripts": {
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
