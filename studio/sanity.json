@@ -17,8 +17,6 @@
     "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
     "dashboard-widget-netlify",
-    "markdown",
-    "tags"
   ],
   "parts": [
     {
