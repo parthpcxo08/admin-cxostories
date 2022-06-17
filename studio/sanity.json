@@ -29,7 +29,7 @@
     },
     {
       "name": "part:@sanity/desk-tool/structure",
-      "path": "./src/structure/deskStructure.js"
+      "path": "./cxostories/structure/deskStructure.js"
     },
     {
       "implements": "part:@sanity/dashboard/config",
