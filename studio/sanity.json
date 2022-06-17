@@ -34,6 +34,14 @@
     {
       "implements": "part:@sanity/dashboard/config",
       "path": "./src/dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./cxostories/components/CXOlogoComponent.js"
+    },
+    {
+      "implements": "part:@sanity/base/app-loading-screen",
+      "path": "./cxostories/components/CXOloaderComponent.js"
     }
   ]
 }
