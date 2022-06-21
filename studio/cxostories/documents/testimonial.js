@@ -5,11 +5,11 @@ export default {
   title: "Testimonial",
   type: "document",
   fields: [
-    {
-      name: "markdown",
-      type: "markdown",
-      title: "Testimonial",
-    },
+    // {
+    //   name: "markdown",
+    //   type: "markdown",
+    //   title: "Testimonial",
+    // },
     // {
     //   name: "testimonial",
     //   type: "array",
@@ -69,16 +69,16 @@ export default {
       title: "Region",
       type: "string",
     },
-    {
-      name: "audience",
-      title: "Audience",
-      description: "OPTIONAL",
-      type: "tags",
-      options: {
-        predefinedTags: useWithTag(audience),
-        allowCreate: false,
-      },
-    },
+    // {
+    //   name: "audience",
+    //   title: "Audience",
+    //   description: "OPTIONAL",
+    //   type: "tags",
+    //   options: {
+    //     predefinedTags: useWithTag(audience),
+    //     allowCreate: false,
+    //   },
+    // },
     {
       name: "diverse",
       title: "Diverse",

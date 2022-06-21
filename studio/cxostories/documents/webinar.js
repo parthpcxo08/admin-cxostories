@@ -21,18 +21,18 @@ export default {
       type: "boolean",
       initialValue: false,
     },
-    {
-      name: "language",
-      title: "Language (OPTIONAL)",
-      type: "tag",
-      options: {
-        predefinedTags: useWithTag(language),
-        allowCreate: false,
-        reactSelectOptions: {
-          isClearable: true,
-        },
-      },
-    },
+    // {
+    //   name: "language",
+    //   title: "Language (OPTIONAL)",
+    //   type: "tag",
+    //   options: {
+    //     predefinedTags: useWithTag(language),
+    //     allowCreate: false,
+    //     reactSelectOptions: {
+    //       isClearable: true,
+    //     },
+    //   },
+    // },
     {
       name: "vanity",
       title: "Vanity (OPTIONAL)",
@@ -47,49 +47,49 @@ export default {
       type: "string",
       validation: (Rule) => Rule.required().error("Please enter webinar title"),
     },
-    {
-      name: "type",
-      title: "Type",
-      type: "tag",
-      description:
-        "CXOonline, CIOonline, CISOonline, CFOonline, CMOonline, CXuncut, HRuncut",
-      options: {
-        predefinedTags: useWithTag(webinarTypes),
-        allowCreate: false,
-      },
-    },
-    {
-      name: "region",
-      title: "Region",
-      type: "tag",
+    // {
+    //   name: "type",
+    //   title: "Type",
+    //   type: "tag",
+    //   description:
+    //     "CXOonline, CIOonline, CISOonline, CFOonline, CMOonline, CXuncut, HRuncut",
+    //   options: {
+    //     predefinedTags: useWithTag(webinarTypes),
+    //     allowCreate: false,
+    //   },
+    // },
+    // {
+    //   name: "region",
+    //   title: "Region",
+    //   type: "tag",
 
-      options: {
-        predefinedTags: useWithTag(region),
-        allowCreate: false,
-      },
-    },
-    {
-      name: "industry",
-      title: "Industry (OPTIONAL)",
-      type: "tag",
-      options: {
-        predefinedTags: useWithTag(industry),
-        allowCreate: false,
-        reactSelectOptions: {
-          isClearable: true,
-        },
-      },
-    },
-    {
-      name: "location",
-      title: "Location (OPTIONAL)",
-      type: "reference",
-      to: [{ type: "location"}],
-      options: {
-        // disableNew: true,
-        layout: "tags",
-      },
-    },
+    //   options: {
+    //     predefinedTags: useWithTag(region),
+    //     allowCreate: false,
+    //   },
+    // },
+    // {
+    //   name: "industry",
+    //   title: "Industry (OPTIONAL)",
+    //   type: "tag",
+    //   options: {
+    //     predefinedTags: useWithTag(industry),
+    //     allowCreate: false,
+    //     reactSelectOptions: {
+    //       isClearable: true,
+    //     },
+    //   },
+    // },
+    // {
+    //   name: "location",
+    //   title: "Location (OPTIONAL)",
+    //   type: "reference",
+    //   to: [{ type: "location"}],
+    //   options: {
+    //     // disableNew: true,
+    //     layout: "tags",
+    //   },
+    // },
     {
       name: "moderator",
       title: "Moderator",
@@ -232,55 +232,55 @@ export default {
       description: "OPTIONAL",
       type: "url",
     },
-    {
-      name: "description",
-      title: "Description (OPTIONAL)",
-      type: "markdown",
-      description: "Main content goes here..",
-    },
-    {
-      name: "resources",
-      title: "Resources (OPTIONAL)",
-      type: "markdown",
-      description: "Links to files",
-    },
-    {
-      name: "panel",
-      title: "Panel (OPTIONAL)",
-      description: "Prediction Panel, WIT Panel, ...",
-      type: "tag",
-      options: {
-        predefinedTags: useWithTag(panel),
-        allowCreate: false,
-        reactSelectOptions: {
-          isClearable: true,
-        },
-      },
-    },
+    // {
+    //   name: "description",
+    //   title: "Description (OPTIONAL)",
+    //   type: "markdown",
+    //   description: "Main content goes here..",
+    // },
+    // {
+    //   name: "resources",
+    //   title: "Resources (OPTIONAL)",
+    //   type: "markdown",
+    //   description: "Links to files",
+    // },
+    // {
+    //   name: "panel",
+    //   title: "Panel (OPTIONAL)",
+    //   description: "Prediction Panel, WIT Panel, ...",
+    //   type: "tag",
+    //   options: {
+    //     predefinedTags: useWithTag(panel),
+    //     allowCreate: false,
+    //     reactSelectOptions: {
+    //       isClearable: true,
+    //     },
+    //   },
+    // },
     {
       name: "topic",
       title: "Topic (OPTIONAL)",
       type: "string",
     },
-    {
-      name: "audience",
-      title: "Audience (OPTIONAL)",
-      description: "CIO, CISO, CFO, CMO, ...",
-      type: "tags",
-      options: {
-        predefinedTags: useWithTag(audience),
-        allowCreate: false,
-      },
-    },
-    {
-      name: "branc",
-      title: "Brand",
-      type: "tag",
-      options: {
-        predefinedTags: brands,
-        allowCreate: false,
-      },
-    },
+    // {
+    //   name: "audience",
+    //   title: "Audience (OPTIONAL)",
+    //   description: "CIO, CISO, CFO, CMO, ...",
+    //   type: "tags",
+    //   options: {
+    //     predefinedTags: useWithTag(audience),
+    //     allowCreate: false,
+    //   },
+    // },
+    // {
+    //   name: "branc",
+    //   title: "Brand",
+    //   type: "tag",
+    //   options: {
+    //     predefinedTags: brands,
+    //     allowCreate: false,
+    //   },
+    // },
   ],
   preview: {
     select: {
@@ -291,7 +291,7 @@ export default {
     },
     prepare(selection) {
       const { title, date, city, country } = selection;
-      console.log(selection);
+      // console.log(selection);
       let name =
         (date ? format(new Date(date), "MM-dd-yyyy") + " - " : "") + title
           ? title

@@ -55,27 +55,27 @@ export default {
       title: "Region",
       type: "string",
     },
-    {
-      name: "audience",
-      title: "Audience",
-      description: "OPTIONAL",
-      type: "tags",
-      options: {
-        predefinedTags: useWithTag(audience),
-        allowCreate: false,
-      },
-    },
+    // {
+    //   name: "audience",
+    //   title: "Audience",
+    //   description: "OPTIONAL",
+    //   type: "tags",
+    //   options: {
+    //     predefinedTags: useWithTag(audience),
+    //     allowCreate: false,
+    //   },
+    // },
 
-    {
-      name: "panel",
-      title: "Panel",
-      description: "OPTIONAL",
-      type: "tag",
-      options: {
-        predefinedTags: useWithTag(panel),
-        allowCreate: false,
-      },
-    },
+    // {
+    //   name: "panel",
+    //   title: "Panel",
+    //   description: "OPTIONAL",
+    //   type: "tag",
+    //   options: {
+    //     predefinedTags: useWithTag(panel),
+    //     allowCreate: false,
+    //   },
+    // },
     {
       name: "diverse",
       title: "Diverse",

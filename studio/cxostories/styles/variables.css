@@ -10,12 +10,12 @@
 
 :root {
   /* Brand colors */
-  
+
   /* --brand-primary: var(--brand-primary);
   --brand-primary--inverted: #ffffff;
   --brand-secondary: #ffa800;
   --brand-secondary--inverted: #3c1609; */
- 
+
   /* Typography */
   /*
   
@@ -34,14 +34,19 @@
   --brand-secondary: #0826e7;
   --brand-secondary--inverted: #3c1609; */
 
-   /* Main Navigation */
-   /* --main-navigation-color: var(--brand-secondary);
+  /* Main Navigation */
+  /* --main-navigation-color: var(--brand-secondary);
    --main-navigation-color--inverted: var(--brand-secondary--inverted); */
 }
 
 .widget_container_31kEB {
   border-radius: 25px
 }
+
 .eiuRZM {
   border-radius: 0.2rem;
+}
+
+.DocumentList_header_H-I-8 {
+  padding: 0.5rem 0.7rem !important;
 }

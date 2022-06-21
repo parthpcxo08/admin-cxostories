@@ -20,20 +20,20 @@
   ],
   "parts": [
     {
-      "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema.js"
-    },
-    {
-      "implements": "part:@sanity/base/theme/variables/override-style",
-      "path": "./src/styles/variables.css"
-    },
-    {
       "name": "part:@sanity/desk-tool/structure",
-      "path": "./src/structure/deskStructure.js"
+      "path": "./cxostories/structure/cxodesk.js"
     },
     {
       "implements": "part:@sanity/dashboard/config",
-      "path": "./src/dashboardConfig.js"
+      "path": "./cxostories/config/cxoconfig.js"
+    },
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./cxostories/schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./cxostories/styles/variables.css"
     },
     {
       "implements": "part:@sanity/base/brand-logo",
